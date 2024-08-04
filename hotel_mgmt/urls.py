@@ -20,9 +20,11 @@ from billMgmtApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.helloFunction),
-    path("contact", views.contactFunction)
-]
+    path("", views.helloFunction), # Base URL, github.com 
+    path("contact", views.contactFunction),
+    path("<str:username>", views.getUser)
 
+    # 127.0.0.1:800/accounts/priya111 -> views.getUser(request, "priya111")
+]
 
 

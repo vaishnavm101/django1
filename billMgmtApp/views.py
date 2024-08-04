@@ -11,7 +11,13 @@ def helloFunction(request):
 def contactFunction(request):
     names = ["Vaishnav", "Priya", "Shubham", "Gurbux"]
     data = {
-        "names": names
+        "names": names,
+        "city":"Mumbai"
     }
     return render(request, "contact.html", data)
+
+
+def getUser(request, username):
+    print(username)
+    return HttpResponse("Hello " + username)
 
