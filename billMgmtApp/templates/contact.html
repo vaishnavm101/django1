@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h1>Contact Details:</h1>
+        <h1>Welcome to Awesome Hotel</h1> <h2>Email: awesomehotel@gmail.com</h2> <h2> Phno: +9199999999 </h2>
+        {% for name in names %}
+            Name : <b>{{name}}</b> <br>
+        {% endfor %}
+        {% if city %}
+            City: {{ city }}
+        {% else %}
+            City value is not supplied!
+        {% endif %}
+    </body>
+</html>
